@@ -1,0 +1,44 @@
+{
+  "name": "@backs/scheduler",
+  "version": "1.0.0",
+  "description": "A task scheduler for Node.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "publish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/backiscute/scheduler.git"
+  },
+  "keywords": [
+    "schedule",
+    "task",
+    "scheduler",
+    "task scheduler",
+    "cron"
+  ],
+  "author": {
+    "name": "Back",
+    "email": "me@back.rs",
+    "url": "https://back.rs"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/backiscute/scheduler/issues"
+  },
+  "homepage": "https://github.com/backiscute/scheduler#readme",
+  "dependencies": {
+    "cron": "^3.1.7",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/uuid": "^9.0.8",
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
