@@ -11,7 +11,7 @@ export default class Scheduler {
         const id = uuid();
 
         this.tasks.push({
-            uuid: id,
+            id,
             isCron: typeof intervalOrCrontime === "string",
             interval: intervalOrCrontime,
             callback,
@@ -24,8 +24,8 @@ export default class Scheduler {
         return id;
     }
 
-    static unschedule(uuid: string) {
-        const task = this.tasks.find((t) => t.uuid === uuid);
+    static unschedule(id: string) {
+        const task = this.tasks.find((t) => t.id === id);
         if (!task) return;
 
         if (task.isCron) (task.handler as CronJob).stop();
@@ -34,8 +34,8 @@ export default class Scheduler {
         this.tasks.splice(this.tasks.indexOf(task), 1);
     }
 
-    static getTask(uuid: string) {
-        return this.tasks.find((t) => t.uuid === uuid);
+    static getTask(id: string) {
+        return this.tasks.find((t) => t.id === id);
     }
 
     static getTasks() {

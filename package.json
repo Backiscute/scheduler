@@ -1,6 +1,6 @@
 {
   "name": "@backs/scheduler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A task scheduler for Node.js",
   "main": "dist/index.js",
   "scripts": {
