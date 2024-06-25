@@ -12,7 +12,7 @@ import Scheduler from "@backs/scheduler"
 // Returns an id of type string
 Scheduler.schedule("0 * * * *", () => console.log("Hello, World!"))
 ```
-### Using set interval
+#### Using set interval
 ```ts
 import Scheduler from "@backs/scheduler"
 

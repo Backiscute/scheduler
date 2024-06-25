@@ -1,8 +1,13 @@
 {
     "name": "@backs/scheduler",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A task scheduler for Node.js",
-    "main": "dist/index.js",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "tsup",
         "prepublish": "npm run build"
